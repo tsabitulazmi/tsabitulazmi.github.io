@@ -9,6 +9,7 @@ import ContactSection from "@/components/section/contact-section";
 import HackathonsSection from "@/components/section/hackathons-section";
 import ProjectsSection from "@/components/section/projects-section";
 import WorkSection from "@/components/section/work-section";
+import ImpactSection from "@/components/section/impact-section";
 import { ArrowUpRight } from "lucide-react";
 
 const BLUR_FADE_DELAY = 0.04;
@@ -24,7 +25,7 @@ export default function Page() {
                 delay={BLUR_FADE_DELAY}
                 className="text-3xl font-semibold tracking-tighter sm:text-4xl lg:text-5xl"
                 yOffset={8}
-                text={`Hi, I'm ${DATA.name.split(" ")[0]}`}
+                text={`Hi, I'm ${DATA.name}`}
               />
               <BlurFadeText
                 className="text-muted-foreground max-w-[600px] md:text-lg lg:text-xl"
@@ -54,6 +55,12 @@ export default function Page() {
             </div>
           </BlurFade>
         </div>
+      </section>
+      <section id="impact">
+        <BlurFade delay={BLUR_FADE_DELAY * 5}>
+          <h3 className="text-l font-bold">At A Glance</h3>
+          <ImpactSection />
+        </BlurFade>
       </section>
       <section id="work">
         <div className="flex min-h-0 flex-col gap-y-6">
@@ -135,11 +142,11 @@ export default function Page() {
           <ProjectsSection />
         </BlurFade>
       </section>
-      <section id="hackathons">
+      {/* <section id="hackathons">
         <BlurFade delay={BLUR_FADE_DELAY * 13}>
           <HackathonsSection />
         </BlurFade>
-      </section>
+      </section> */}
       <section id="contact">
         <BlurFade delay={BLUR_FADE_DELAY * 16}>
           <ContactSection />
