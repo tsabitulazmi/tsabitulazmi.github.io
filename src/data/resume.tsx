@@ -182,68 +182,55 @@ export const DATA = {
       image: "/enterprise.png",
       video: "",
     },
-    // {
-    //   title: "llm.report",
-    //   href: "https://llm.report",
-    //   dates: "April 2023 - September 2023",
-    //   active: true,
-    //   description:
-    //     "Developed an open-source logging and analytics platform for OpenAI: Log your ChatGPT API requests, analyze costs, and improve your prompts.",
-    //   technologies: [
-    //     "Next.js",
-    //     "Typescript",
-    //     "PostgreSQL",
-    //     "Prisma",
-    //     "TailwindCSS",
-    //     "Shadcn UI",
-    //     "Magic UI",
-    //     "Stripe",
-    //     "Cloudflare Workers",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://llm.report",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //     {
-    //       type: "Source",
-    //       href: "https://github.com/dillionverma/llm.report",
-    //       icon: <Icons.github className="size-3" />,
-    //     },
-    //   ],
-    //   image: "",
-    //   video: "https://cdn.llm.report/openai-demo.mp4",
-    // },
-    // {
-    //   title: "Automatic Chat",
-    //   href: "https://automatic.chat",
-    //   dates: "April 2023 - March 2024",
-    //   active: true,
-    //   description:
-    //     "Developed an AI Customer Support Chatbot which automatically responds to customer support tickets using the latest GPT models.",
-    //   technologies: [
-    //     "Next.js",
-    //     "Typescript",
-    //     "PostgreSQL",
-    //     "Prisma",
-    //     "TailwindCSS",
-    //     "Shadcn UI",
-    //     "Magic UI",
-    //     "Stripe",
-    //     "Cloudflare Workers",
-    //   ],
-    //   links: [
-    //     {
-    //       type: "Website",
-    //       href: "https://automatic.chat",
-    //       icon: <Icons.globe className="size-3" />,
-    //     },
-    //   ],
-    //   image: "",
-    //   video:
-    //     "https://pub-83c5db439b40468498f97946200806f7.r2.dev/automatic-chat.mp4",
-    // },
+    {
+      title: "Liga 1 Indonesia Football Player Data Exploration",
+      href: "https://github.com/tsabitulazmi/Liga1PlayerDataExploration",
+      dates: "2023",
+      active: true,
+      description:
+        "I worked on this project based on my passion for data analysis and my hobbies and interest in football.",
+      technologies: [
+        "Python",
+        "Numpy",
+        "Pandas",
+        "Matplotlib",
+        "Jupyter Notebook",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/tsabitulazmi/Liga1PlayerDataExploration",
+          icon: <Icons.github className="size-3" />,
+        }
+      ],
+      image: "bri_liga1.webp",
+      video: "",
+    },
+    {
+      title: "IDCamp - Data Analysis Project",
+      href: "https://github.com/tsabitulazmi/IDCamp_DataAnalysisProject",
+      dates: "2023",
+      active: true,
+      description:
+        "This project goal is to do Data Exploration Analysis of E-Commerce Public Sales dataset and get some insight from the sales in this E-Commerce that can help to create company decision.",
+      technologies: [
+        "Python",
+        "Jupyter Notebook",
+        "Numpy",
+        "Pandas",
+        "Matplotlib",
+        "Seaborn",
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/tsabitulazmi/IDCamp_DataAnalysisProject",
+          icon: <Icons.github className="size-3" />,
+        }
+      ],
+      image: "/idcamp.jpeg",
+      video: "",
+    },
   ],
   hackathons: [
     {
