@@ -19,7 +19,7 @@ export const DATA = {
     "Data Engineer building pipelines that make data usable.",
   summary:
     "I studied Aerospace Engineering at ITB, then moved into data engineering — currently building and maintaining pipelines for regulatory reporting across 9 Indonesian banks, covering daily to yearly submission cycles. Most of my work is in SQL and ETL: PostgreSQL, Pentaho, Airflow, Docker, and Python, processing hundreds of thousands of records a day where a broken pipeline means a missed regulatory deadline. I build pipelines to not fail — and when they do, to fail in a way that's easy to trace.",
-  avatarUrl: "/me.png",
+  avatarUrl: "/me.jpg",
   skills: [
     { name: "Postgres", icon: Postgresql },
     { name: "MySql", icon: MySQL },
@@ -54,7 +54,7 @@ export const DATA = {
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "muh.tsabitulazmi@gmail.com",
         icon: Icons.email,
 
         navbar: false,
@@ -74,8 +74,8 @@ export const DATA = {
       end: "Now",
       description: [
         "Designed and maintained data transformation and ETL/ELT pipelines using Python and Pentaho, orchestrated with Apache Airflow and containerized using Docker, ensuring reliable and scalable processing for daily to yearly regulatory reporting workflows.",
-        "Processed and validated hundreds of thousands of records daily, improving reporting reliability and reducing manual intervention.",
-        "Collaborated with Business Analysts to translate complex client requirements into precise data reports that met all mandatory regulatory standards.",
+        "Designed and implemented the migration of production ETL pipelines from Pentaho to Python and Apache Airflow, standardizing workflow orchestration and simplifying maintenance across multiple reporting processes.",
+        "Collaborated with Business Analysts to translate complex client requirements into regulatory-compliant data solutions.",
         "Successfully implemented reporting systems for 9 banks within 2.5 years, managing the full technical life-cycle from initial setup to production.",
         "Developed a validation system to pre-screen data against regulator specifications, significantly cutting down report rejection rates.",
       ],

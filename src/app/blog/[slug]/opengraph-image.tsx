@@ -1,8 +1,10 @@
- 
-
 import { ImageResponse } from "next/og";
 import { allPosts } from "content-collections";
 import { DATA } from "@/data/resume";
+import fs from "node:fs";
+import path from "node:path";
+
+export const runtime = "nodejs";
 
 export async function generateStaticParams() {
   return allPosts.map((post) => ({
@@ -19,26 +21,36 @@ export const size = {
 };
 export const contentType = "image/png";
 
-const getFontData = async () => {
+const getFontData = () => {
     try {
-        const [cabinetGrotesk, clashDisplay] = await Promise.all([
-            fetch(
-                new URL(
-                    "../../../../public/fonts/CabinetGrotesk-Medium.ttf",
-                    import.meta.url
-                )
-            ).then((res) => res.arrayBuffer()),
-            fetch(
-                new URL(
-                    "../../../../public/fonts/ClashDisplay-Semibold.ttf",
-                    import.meta.url
-                )
-            ).then((res) => res.arrayBuffer()),
-        ]);
+        const cabinetGrotesk = fs.readFileSync(
+            path.join(process.cwd(), "public/fonts/CabinetGrotesk-Medium.ttf")
+        );
+        const clashDisplay = fs.readFileSync(
+            path.join(process.cwd(), "public/fonts/ClashDisplay-Semibold.ttf")
+        );
         return { cabinetGrotesk, clashDisplay };
     } catch (error) {
         console.error("Failed to load fonts:", error);
         return null;
+    }
+};
+
+const getAvatarDataUri = () => {
+    try {
+        if (!DATA.avatarUrl) return undefined;
+        const avatarPath = path.join(
+            process.cwd(),
+            "public",
+            DATA.avatarUrl.replace(/^\//, "")
+        );
+        const buffer = fs.readFileSync(avatarPath);
+        const rawExt = path.extname(avatarPath).slice(1).toLowerCase() || "png";
+        const ext = rawExt === "jpg" ? "jpeg" : rawExt;
+        return `data:image/${ext};base64,${buffer.toString("base64")}`;
+    } catch (error) {
+        console.error("Failed to load avatar image:", error);
+        return undefined;
     }
 };
 
@@ -133,12 +145,10 @@ export default async function Image({
     params: Promise<{ slug: string }>;
 }) {
     try {
-        const fontData = await getFontData();
+        const fontData = getFontData();
         const { slug } = await params;
         const post = allPosts.find((p) => p._meta.path.replace(/\.mdx$/, "") === slug);
-        const imageUrl = DATA.avatarUrl
-            ? new URL(DATA.avatarUrl, DATA.url).toString()
-            : undefined;
+        const imageUrl = getAvatarDataUri();
 
         if (!post) {
             return new ImageResponse(
