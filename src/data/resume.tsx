@@ -8,6 +8,8 @@ import { MySQL } from "@/components/ui/svgs/mysql";
 import { BigQuery } from "@/components/ui/svgs/bigquery";
 import { GoogleCloud } from "@/components/ui/svgs/gcp";
 import { Excel } from "@/components/ui/svgs/Excel";
+import { Tableau } from "@/components/ui/svgs/tableau";
+import { Looker } from "@/components/ui/svgs/Looker";
 
 export const DATA = {
   name: "Muhammad Tsabitul Azmi",
@@ -28,7 +30,9 @@ export const DATA = {
     { name: "Docker", icon: Docker },
     { name: "GoogleCloud", icon: GoogleCloud },
     { name: "BigQuery", icon: BigQuery },
-    { name: "Spreadsheets", icon: Excel }
+    { name: "Spreadsheets", icon: Excel },
+    { name: "Tableau", icon: Tableau },
+    { name: "Looker Studio", icon: Looker }
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
@@ -128,6 +132,33 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Sales Data Engineering Pipeline",
+      href: "https://github.com/tsabitulazmi/sales-data-engineering-pipeline",
+      dates: "2026",
+      active: true,
+      description:
+        "This project implements an end-to-end ETL (Extract, Transform, Load) pipeline using Apache Airflow to automate the ingestion of sales transaction data from Google Drive into Google BigQuery.",
+      technologies: [
+        "Python",
+        "SQL",
+        "Docker",
+        "BigQuery",
+        "Google Cloud Platform",
+        "Google Cloud Storage",
+        "Google Drive",
+        "Looker Studio"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/tsabitulazmi/sales-data-engineering-pipeline",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/sales_pipeline.jpg",
+      video: "",
+    },
     {
       title: "E-Commerce data pipeline",
       href: "https://github.com/tsabitulazmi/ecommerce-data-pipeline",
