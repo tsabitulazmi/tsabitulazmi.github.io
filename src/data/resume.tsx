@@ -10,6 +10,7 @@ import { GoogleCloud } from "@/components/ui/svgs/gcp";
 import { Excel } from "@/components/ui/svgs/Excel";
 import { Tableau } from "@/components/ui/svgs/tableau";
 import { Looker } from "@/components/ui/svgs/Looker";
+import {AmazonS3, Athena, AwsCloud, AwsGlue, Streamlit} from "@/components/ui/svgs/new";
 
 export const DATA = {
   name: "Muhammad Tsabitul Azmi",
@@ -30,9 +31,14 @@ export const DATA = {
     { name: "Docker", icon: Docker },
     { name: "GoogleCloud", icon: GoogleCloud },
     { name: "BigQuery", icon: BigQuery },
+    { name: "AWS Cloud", icon: AwsCloud },
+    { name: "Amazon S3", icon: AmazonS3 },
+    { name: "AWS Glue Data Catalog", icon: AwsGlue },
+    { name: "Amazon Athena", icon: Athena },
+    { name: "Streamlit", icon: Streamlit },
     { name: "Spreadsheets", icon: Excel },
     { name: "Tableau", icon: Tableau },
-    { name: "Looker Studio", icon: Looker }
+    { name: "Looker Studio", icon: Looker },
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
