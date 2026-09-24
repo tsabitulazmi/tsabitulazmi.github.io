@@ -140,13 +140,16 @@ export const DATA = {
         "An end-to-end Data Engineering project that builds a cloud-based analytics platform for Avenged Sevenfold (A7X) using Spotify and YouTube data.",
       technologies: [
         "Python",
-        "Docker",
-        "Airflow",
-        "AWS Cloud",
-        "AWS S3",
-        "AWS Glue",
-        "AWS Athena",
-        "Streamlit"
+        "Spotify API",
+        "Youtube API",
+        "Apache Airflow",
+        "AWS",
+        "Amazon S3",
+        "AWS Glue Data Catalog",
+        "Amazon Athena",
+        "dbt",
+        "Streamlit",
+        "Docker"
       ],
       links: [
         {
@@ -155,7 +158,7 @@ export const DATA = {
           icon: <Icons.github className="size-3" />,
         },
       ],
-      image: "/a7x.png",
+      image: "/a7x.jpg",
       video: "",
     },
     {
