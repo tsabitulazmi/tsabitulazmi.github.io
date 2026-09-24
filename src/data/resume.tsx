@@ -36,7 +36,6 @@ export const DATA = {
   ],
   navbar: [
     { href: "/", icon: HomeIcon, label: "Home" },
-    { href: "/blog", icon: NotebookIcon, label: "Blog" },
   ],
   contact: {
     email: "muh.tsabitulazmi@gmail.com",
@@ -132,6 +131,33 @@ export const DATA = {
     },
   ],
   projects: [
+    {
+      title: "Avenged Sevenfold Music Performance Analytics",
+      href: "https://github.com/tsabitulazmi/a7x-performance-analytics",
+      dates: "2026",
+      active: true,
+      description:
+        "An end-to-end Data Engineering project that builds a cloud-based analytics platform for Avenged Sevenfold (A7X) using Spotify and YouTube data.",
+      technologies: [
+        "Python",
+        "Docker",
+        "Airflow",
+        "AWS Cloud",
+        "AWS S3",
+        "AWS Glue",
+        "AWS Athena",
+        "Streamlit"
+      ],
+      links: [
+        {
+          type: "Source",
+          href: "https://github.com/tsabitulazmi/a7x-performance-analytics",
+          icon: <Icons.github className="size-3" />,
+        },
+      ],
+      image: "/a7x.png",
+      video: "",
+    },
     {
       title: "Sales Data Engineering Pipeline",
       href: "https://github.com/tsabitulazmi/sales-data-engineering-pipeline",
